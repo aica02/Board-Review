@@ -41,13 +41,19 @@ export default function Navbar({ activeTab, setActiveTab, streak, lowEnergyMode,
         >
           Math & Eng. Sciences
         </button>
+        <button
+          onClick={() => setActiveTab("powerplant")}
+          className={`nav-tab ${activeTab === "powerplant" ? "is-active" : ""}`}
+        >
+          Powerplant Engineering
+        </button>
       </nav>
 
       <div className="topbar-actions">
-        <div className="streak-badge">
+        {/* <div className="streak-badge">
           <Flame className="icon icon-small icon-filled" />
           <span>{streak} Day Streak</span>
-        </div>
+        </div> */}
 
         <button
           onClick={() => setLowEnergyMode(!lowEnergyMode)}

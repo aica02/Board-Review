@@ -1,4 +1,4 @@
-import { Brain, BookOpen, Zap, Trash2, Search } from "lucide-react";
+import { Brain, BookOpen, Zap, Trash2, Search, Lighthouse, Calculator } from "lucide-react";
 import MathView from "./MathView";
 
 export default function Dashboard({ cards, setActiveTab, onDeleteCard, searchQuery, setSearchQuery, lowEnergyMode }) {
@@ -44,9 +44,32 @@ export default function Dashboard({ cards, setActiveTab, onDeleteCard, searchQue
             <p className="feature-description">PRC-style word problems focusing on first-step governing equations.</p>
           </div>
         )}
-      </div>
+        <div 
+          onClick={() => setActiveTab("evaluation")}
+          className="feature-card feature-card-evaluation"
+        >
+          <div className="feature-icon feature-icon-purple">
+            <Calculator className="icon" />
+          </div>
+          <h3 className="feature-title">Math &amp; Eng. Sciences</h3>
+          <p className="feature-description">Board exam practice sets for mathematics and engineering sciences.</p>
+        
+        </div>  
+        <div 
+          onClick={() => setActiveTab("powerplant")}
+          className="feature-card feature-card-evaluation"
+        >
+          <div className="feature-icon feature-icon-orange">
+            <Lighthouse className="icon" />
+          </div>
+          <h3 className="feature-title">Powerplant Engineering</h3>
+          <p className="feature-description">Board exam practice sets for mathematics and engineering sciences.</p>
+        
+        </div>  
+        </div>
+      
 
-      <section className="vault-panel">
+      {/* <section className="vault-panel">
         <div className="vault-header">
           <div>
             <h3 className="vault-title">Formula &amp; Challenge Vault</h3>
@@ -97,7 +120,7 @@ export default function Dashboard({ cards, setActiveTab, onDeleteCard, searchQue
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

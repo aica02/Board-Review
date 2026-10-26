@@ -7,13 +7,13 @@ import Dashboard from "./components/Dashboard";
 import RecallEngine from "./components/RecallEngine";
 import StrategyEngine from "./components/StrategyEngine";
 import AddCardModal from "./components/AddCardModal";
-import EvaluationMenu from "./components/EvaluationMenu"; // Import the new component
-
+import EvaluationMenu from "./components/EvaluationMenu"; 
+import Powerplant from "./components/Powerplant";
 
 export default function App() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("dashboard"); // dashboard | recall | strategy
+  const [activeTab, setActiveTab] = useState("dashboard");
   const [lowEnergyMode, setLowEnergyMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
@@ -83,6 +83,7 @@ export default function App() {
             {activeTab === "recall" && <RecallEngine cards={cards} />}
             {activeTab === "strategy" && <StrategyEngine />}
             {activeTab === "evaluation" && <EvaluationMenu />}
+            {activeTab === "powerplant" && <Powerplant />}
           </>
         )}
       </main>
