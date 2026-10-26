@@ -7,6 +7,8 @@ import Dashboard from "./components/Dashboard";
 import RecallEngine from "./components/RecallEngine";
 import StrategyEngine from "./components/StrategyEngine";
 import AddCardModal from "./components/AddCardModal";
+import EvaluationMenu from "./components/EvaluationMenu"; // Import the new component
+
 
 export default function App() {
   const [cards, setCards] = useState([]);
@@ -80,6 +82,7 @@ export default function App() {
             )}
             {activeTab === "recall" && <RecallEngine cards={cards} />}
             {activeTab === "strategy" && <StrategyEngine />}
+            {activeTab === "evaluation" && <EvaluationMenu />}
           </>
         )}
       </main>

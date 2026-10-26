@@ -26,6 +26,7 @@ export default function Navbar({ activeTab, setActiveTab, streak, lowEnergyMode,
         >
           Recall Engine
         </button>
+        
         {!lowEnergyMode && (
           <button
             onClick={() => setActiveTab("strategy")}
@@ -34,6 +35,12 @@ export default function Navbar({ activeTab, setActiveTab, streak, lowEnergyMode,
             Strategy Engine
           </button>
         )}
+        <button
+          onClick={() => setActiveTab("evaluation")}
+          className={`nav-tab ${activeTab === "evaluation" ? "is-active" : ""}`}
+        >
+          Math & Eng. Sciences
+        </button>
       </nav>
 
       <div className="topbar-actions">
